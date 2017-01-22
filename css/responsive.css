@@ -1,6 +1,4 @@
 @media screen and (min-width: 480px) {
-
-
   /***************
   TWO COLUMN LAYOUT
   ***************/
@@ -10,32 +8,23 @@
     float: left;
   }
 
-#secondary {
-  width: 40px;
-  float: left;;
-}
-
-/***************
-PAGE: PORTFOLIO
-***************/
-
-#gallery li {
-  width: 28.3333%;
-}
-
-#gallery li:nth-child(4n) {
-  clear: left;
-}
-
-
-/***************
-PAGE: ABOUT
-***************/
-
-.profile-photo {
-  float: left;
-  margin: 0 5% 80% 0;
+  #secondary {
+    width: 40px;
+    float: left;
   }
+
+  /***************
+  PAGE: PORTFOLIO
+  ***************/
+
+  #gallery li {
+    width: 28.3333%;
+  }
+
+  #gallery li:nth-child(4n) {
+    clear: left;
+  }
+
 }
 
 @media screen and (min-width: 660px) {
@@ -44,34 +33,32 @@ PAGE: ABOUT
   HEADER
   ***************/
 
-nav {
-  background: none;
-  float: right;
-  font-size: 1.125em;
-  margin-right: 5%;
-  text-align: right;width: 45%;
-}
+  nav {
+    background: none;
+    font-size: 1.125em;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-#logo {
-  float: left;
-  margin-left: 5%;
-  text-align: left;
-  width: 45%;
-}
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+  }
 
-h1 {
-  font-size: 2.5em;
-}
+  h1 {
+    font-size: 2.5em;
+  }
 
-h2 {
-  font-size: 0.825em;
-  margin-bottom: 20px;
-}
+  h2 {
+    font-size: 0.825em;
+    margin-bottom: 20px;
+  }
 
-header {
-  border-bottom: 5px solid #033649;
-  margin-bottom: 60px;
-}
-
-
+  header {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
