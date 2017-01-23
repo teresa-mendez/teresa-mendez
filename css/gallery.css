@@ -1,12 +1,28 @@
-#gallery ul {
-  list-style: none;
-  padding: 0px;
+#gallery {
+  /* Mejorar, usar em o % */
+  /* margin-top: 1.3em; */
+  margin-top: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-
-#gallery li {
-  display: inline-block;
+#gallery a {
+  /* margin-top: 0.3em; */
+  margin-top: 0.5%;
   width: 33%;
+}
+
+@media all and (max-width: 500px) {
+  #gallery {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+
+  #gallery a {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 #gallery figure {
@@ -50,5 +66,5 @@
 }
 
 #gallery figure:hover figcaption {
-opacity: 1;
+  opacity: 1;
 }
