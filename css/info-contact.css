@@ -1,27 +1,25 @@
-.contact-info {
+#info-contact{
+  background-color: #CFD5E1;
+}
+
+#about {
+    margin: 5%;
+    color: #7B7B7C;
+    font-family: 'Muli', sans-serif;
+    font-size: 1.2em;
+}
+
+ul.social-icons{
   list-style: none;
   padding: 0;
-  margin: 0;
-  font-size: 0.9em;
 }
 
-.contact-info a {
-  display: block;
-  min-height: 20px;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  padding: 0 0 0 30px;
-  margin: 0 0 10px;
+.social-icons li{
+  display: inline-block;
 }
 
-.contact-info li.phone a {
-  background-image: url('../img\phonee.png');
-}
-
-.contact-info li.mail a {
-  background-image: url('../img\email2.png');
-}
-
-.contact-info li.twitter a {
-  background-image: url('../img\twitterr.png');
+.social-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
 }

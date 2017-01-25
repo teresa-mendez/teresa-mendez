@@ -6,23 +6,17 @@
 body{
   font-family: 'Exo', sans-serif;
   font-size: 16px;
-  background-color: #FFFFFF;
-  color: #999;
+  background-color: #EDEDF2;
+  color: #7B7B7C;
 }
 
-.social-icon{
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  display: inline;
-}
+
 
 /***************
 HEADER
 ***************/
 
 header {
-  background: #FFFFFF;
   width: 100%;
   position:fixed;
   top:0;
@@ -32,7 +26,7 @@ header {
 }
 
 header.dark{
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.8);
   height: 4em;
 }
 
@@ -41,10 +35,13 @@ NAVIGATION
 ***************/
 
 nav {
-  font-size: 1.125em;
+  background-color: #CFD5E1;
+  color: #7B7B7C;
+  width: 80
+  font-size: 1.0em;
   text-align: center;
   padding: 10px 0;
-  margin: 10px 0 0;
+  margin: 10px auto;
 }
 
 nav ul {
@@ -64,7 +61,7 @@ nav li a {
 }
 
 nav li a, nav li a:visited {
-  color: #BDBDBD;
+  color: #7B7B7C;
 }
 
 nav li a.selected, nav li a:hover {
@@ -74,7 +71,7 @@ nav li a.selected, nav li a:hover {
 
 hr {
   border: 0;
-  border-bottom: 2px solid #BDBDBD;
+  border-bottom: 2px solid #7B7B7C;
   width: 60%;
   justify-content: center;
   margin-left: auto;
@@ -92,7 +89,7 @@ hr {
   background-size: cover;
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   margin-top: 80px;
   /*margin-top: 1.5em;*/
 }
@@ -104,22 +101,22 @@ hr {
   top: 50%;
   text-align: center;
   width: 40%;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
   transform: translate(0, -50%);
 }
 
 .box h1 {
-  font-family: 'Exo', sans-serif;
+  font-family: 'Muli', sans-serif;
   margin: 15px 0;
-  font-size: 2.05em;
-  font-weight: normal;
+  font-weight: 200;
+  font-size: 2.5em;
   line-height: 0.8em;
   color: #7B7B7C;
 }
 
 .box h2 {
   font-family: 'Rock Salt', sans-serif;
-  font-size: 0.75em;
+  font-size: 1.1em;
   margin: -5px 0 0;
   font-weight: normal;
   color: #7B7B7C;
