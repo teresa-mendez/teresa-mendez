@@ -20,6 +20,12 @@ body{
   padding: 0%;
 }
 
+@media screen and (max-width: 40.5em) {
+  nav, nav.dark, #wrapper {
+    max-width: 100%;
+  }
+}
+
 .hero {
   background-image: url(../img/hero_sea-min.jpg);
   background-size: cover;
