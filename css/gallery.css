@@ -54,14 +54,3 @@
 #gallery figure:hover figcaption {
   opacity: 1;
 }
-
-@media all and (max-width: 40.5em) {
-  #gallery {
-    flex-direction: column;
-  }
-
-  #gallery a {
-    width: 100%;
-    margin: 0.3em auto 0;
-  }
-}
