@@ -1,17 +1,28 @@
 #info-contact{
-  background-color: #CFD5E1;
+  background-color: #EAEAEA;
+  margin-top: 1.5em;
+  padding: 1em;
+}
+
+#about h1{
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
 }
 
 #about {
-    margin: 5%;
-    color: #7B7B7C;
-    font-family: 'Muli', sans-serif;
-    font-size: 1.2em;
+  margin: 5%;
+  color: #7B7B7C;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.2em;
 }
-
+#contact{
+  display: flex;
+  justify-content: center;
+}
 ul.social-icons{
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .social-icons li{

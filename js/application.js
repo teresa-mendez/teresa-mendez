@@ -1,6 +1,7 @@
 // Scrollup
 $.scrollUp({
-  scrollText: ''
+  scrollText: '',
+  scrollSpeed: 300
 });
 
 // Change nav style after scrolling
@@ -23,8 +24,8 @@ $('a[href*="#"]:not([href="#"])').click(function() {
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
     if (target.length) {
       $('html, body').animate({
-        scrollTop: target.offset().top - 38
-      }, 400);
+        scrollTop: target.offset().top - 57
+      }, 300);
       return false;
     }
   }
@@ -45,9 +46,10 @@ $(window).scroll(function() {
   for (var i = 0; i < aArray.length; i++) {
     var theID = aArray[i];
     var secPosition = $(theID).offset().top;
-    secPosition = secPosition - 80;
+    secPosition = secPosition - 85;
     var divHeight = $(theID).height();
-    divHeight = divHeight + 90;
+    console.log(divHeight)
+    divHeight = divHeight - 50;
     if (windowPos >= secPosition && windowPos < (secPosition + divHeight)) {
       $("a[href='" + theID + "']").addClass("active");
     } else {
