@@ -42,8 +42,8 @@ body{
 .hero .inner-box {
   background-color: rgba(255, 255, 255, 0.8);
   margin: 0.8em;
-    padding: 1em;
-    text-align: center;
+  padding: 1em;
+  text-align: center;
 }
 
 .hero .box h1 {
