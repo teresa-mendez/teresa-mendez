@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-body:after{
-  display:none; content: url(../img/hero_sea-min.jpg);
-}
-
 body{
   font-family: 'Exo', sans-serif;
   font-size: 16px;
