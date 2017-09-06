@@ -35,9 +35,9 @@ body{
 .hero .box{
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0);
-  border: 3px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   align-self: auto;
-
+  width: 40%;
 }
 
 .hero .inner-box {
@@ -57,7 +57,7 @@ body{
 
 .hero .box h2 {
   font-family: 'Rock Salt', sans-serif;
-  font-size: 1.1em;
+  font-size: 1.5em;
   font-weight: normal;
   color: #7B7B7C;
 }

@@ -7,6 +7,10 @@
     max-width: 100%;
   }
 
+  .hero .box{
+    width: auto;
+  }
+
   .hero .box h1 {
     font-size: 2em;
     line-height: 1em;
