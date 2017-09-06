@@ -1,5 +1,9 @@
+h1.web-work{
+  margin: 1.5em 0 0;
+}
+
 #gallery {
-  margin-top: 1.5em;
+  margin-top: 0.8em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -7,7 +11,7 @@
 
 #gallery a {
   margin-top: 0.3em;
-  width: 33%;
+  width: 50%;
 }
 
 #gallery figure {
@@ -17,7 +21,7 @@
 }
 
 #gallery img {
-  -webkit-filter: grayscale(100%);
+  /*-webkit-filter: grayscale(100%);*/
   display: block;
   max-width: 100%;
   height: auto;
