@@ -21,7 +21,7 @@ h1.web-work{
 }
 
 #gallery img {
-  -webkit-filter: grayscale(60%);
+  -webkit-filter: grayscale(40%);
   display: block;
   max-width: 100%;
   height: auto;
