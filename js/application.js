@@ -43,12 +43,18 @@ $(window).scroll(function() {
   var windowPos = $(window).scrollTop();
   var windowHeight = $(window).height();
   var docHeight = $(document).height();
+
+
+
   for (var i = 0; i < aArray.length; i++) {
     var theID = aArray[i];
     var secPosition = $(theID).offset().top;
     secPosition = secPosition - 85;
     var divHeight = $(theID).height();
     console.log(divHeight)
+
+
+    
     divHeight = divHeight - 50;
     if (windowPos >= secPosition && windowPos < (secPosition + divHeight)) {
       $("a[href='" + theID + "']").addClass("active");
