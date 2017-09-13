@@ -3,7 +3,7 @@ h1.web-work{
 }
 
 #gallery {
-  margin-top: 0.8em;
+  margin: 0.8em 0.8em 0 0.8em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
