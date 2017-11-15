@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Teresa Mendez | Designer</title>
   <meta charset="utf-8">
@@ -10,12 +11,13 @@
   <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/scroll-up.css">
-  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/lightgallery.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/gallery.css">
   <link rel="stylesheet" href="css/info-contact.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="img/favicon.ico">
 </head>
 
@@ -24,8 +26,12 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#gallery">WEB WORK</a></li>
-        <li><a href="#info-contact">INFO/CONTACT</a></li>
+        <li>
+          <a href="#gallery">WEB WORK</a>
+        </li>
+        <li>
+          <a href="#info-contact">INFO/CONTACT</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -33,53 +39,44 @@
   <div id="wrapper">
 
     <section class="hero">
-      <div class="box">
+      <div class="box" id="tilt">
         <div class="inner-box">
           <h1>TERESA MENDEZ</h1>
-          <h2>Graphic Design</h2>
+          <h2>Web Design</h2>
         </div>
       </div>
     </section>
 
-    <h1 class="web-work">Web Work</h1>
+    <h1 class="web-work">Web</h1>
     <section id="gallery" class="gallery">
-      <a href="img/CompactorPro_Lander.jpg" data-lightbox="image-1" data-title="CompactorPro">
-        <figure>
-          <img src="img/contactorpro-wind-min.png" alt=""/>
-        </figure>
-      </a>
+        <a href="img/CompactorPro_Lander.jpg">
+          <img src="img/contactorpro-windR.png" alt="" />
+        </a>
 
-      <a href="img/Warranty_Quote_Homepage.jpg" data-lightbox="image-4" data-title="Warranty">
-        <figure>
-          <img src="img/warranty-wind-min.png" alt=""/>
-        </figure>
-      </a>
+        <a href="img/Warranty_Quote_Homepage.jpg">
+          <img src="img/warranty-windR.png" alt="" />
+        </a>
 
-      <a href="img/Prizefind_homepage.jpg" data-lightbox="image-2" data-title="Prize-find">
-        <figure>
-          <img src="img/prizefind-wind-min.png" alt=""/>
-        </figure>
-        <a href="img/Prizefind_processing.jpg" data-lightbox="image-2" data-title="Prize-find" class="hidden"></a>
-      </a>
+        <a href="img/Prizefind_homepage.jpg">
+          <img src="img/prizefind-windR.png" alt="" />
+        </a>
 
-      <a href="img/TopTenWarranties_Homepage.jpg" data-lightbox="image-3" data-title="TopTen">
-        <figure>
-          <img src="img/topten-wind-min.png" alt=""/>
-        </figure>
-      </a>
+        <a href="img/TopTenWarranties_Homepage.jpg">
+          <img src="img/topten-windR.png" alt="" />
+        </a>
 
-      <a href="img/wordpress-project.png" data-lightbox="image-5" data-title="Travel.com">
-        <figure>
-          <img src="img/travel-wind-min.png" alt=""/>
-        </figure>
-      </a>
-
+        <a href="img/wordpress-project.png">
+          <img src="img/travel-windR.png" alt="" />
+        </a>
     </section>
 
     <section id="info-contact">
       <section id="about">
-        <p><strong>HELLO!</strong> I'm Teresa Mendez from Mar del Plata, Argentina. I specialize in web design. If you would like to discuss more, share feedback or ask any questions, let's talk!</p>
-        <p><em>“Design creates culture. Culture shapes values. Values determine the future.”</em> – Robert L. Peters</p>
+        <p>
+          <strong>HELLO!</strong> I'm Teresa Mendez from Mar del Plata, Argentina. I specialize in web design. If you would like
+          to discuss more, share feedback or ask any questions, mail me!</p>
+        <p>
+          <em>“Design creates culture. Culture shapes values. Values determine the future.”</em> – Robert L. Peters</p>
       </section>
       <section id="gallery-about">
         <figure>
@@ -94,22 +91,41 @@
       </section>
       <section id="contact">
         <ul class="social-icons">
-          <li><a href="http://github.com/teresa-mendez"><img src="img/github.png" class="social-icon" alt="Github Logo"></a></li>
-          <li><a href="https://nz.linkedin.com/in/teresa-mendez-347a0ba4"><img src="img/linkedin.png" class="social-icon" alt="linkedin Logo"></a></li>
-          <li><a href="mailto:teresa.mendez0@gmail.com"><img src="img/email.png" class="social-icon" alt="Gmail Logo"></a></li>
+          <li class="hvr-grow">
+            <a href="http://github.com/teresa-mendez" target="_blank">
+              <img src="img/github.png" class="social-icon" alt="Github Logo">
+            </a>
+          </li>
+          <li class="hvr-grow">
+            <a href="https://nz.linkedin.com/in/teresa-mendez-347a0ba4" target="_blank">
+              <img src="img/linkedin.png" class="social-icon" alt="linkedin Logo">
+            </a>
+          </li>
+          <li class="hvr-grow">
+            <a href="mailto:teresa.mendez0@gmail.com">
+              <img src="img/email.png" class="social-icon" alt="Gmail Logo">
+            </a>
+          </li>
         </ul>
       </section>
+      <footer>
+        <p>&copy; 2017 Teresa Mendez</p>
+      </footer>
+        <!-- <i class="fa fa-long-arrow-up" aria-hidden="true"></i> -->
     </section>
-
-    <footer>
-      <p>&copy; 2017 Teresa Mendez</p>
-    </footer>
 
   </div>
 
+
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/tilt.jquery.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/scrollup/2.4.1/jquery.scrollUp.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/lightgallery.min.js"></script>
+
+  <!-- lightgallery plugins -->
+  <script type="text/javascript" src="js/lg-thumbnail.min.js"></script>
+  <script type="text/javascript" src="js/lg-fullscreen.min.js"></script>
   <script type="text/javascript" src="js/application.js"></script>
 </body>
+
 </html>

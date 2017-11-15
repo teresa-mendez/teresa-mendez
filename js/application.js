@@ -1,7 +1,7 @@
 // Scrollup
 $.scrollUp({
-  scrollText: '',
-  scrollSpeed: 300
+  scrollSpeed: 300,
+  scrollText: 'Scroll to top', // Text for element, can contain HTML
 });
 
 // Change nav style after scrolling
@@ -44,16 +44,11 @@ $(window).scroll(function() {
   var windowHeight = $(window).height();
   var docHeight = $(document).height();
 
-
-
   for (var i = 0; i < aArray.length; i++) {
     var theID = aArray[i];
     var secPosition = $(theID).offset().top;
     secPosition = secPosition - 85;
     var divHeight = $(theID).height();
-    console.log(divHeight)
-
-
     
     divHeight = divHeight - 50;
     if (windowPos >= secPosition && windowPos < (secPosition + divHeight)) {
@@ -63,3 +58,22 @@ $(window).scroll(function() {
     }
   }
 });
+
+// LightGallery
+$("#gallery").lightGallery(); 
+
+// Effect for the box hero
+var options = {
+  maxTilt:        20,
+  perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+  easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+  scale:          1,      // 2 = 200%, 1.5 = 150%, etc..
+  speed:          300,    // Speed of the enter/exit transition.
+  transition:     true,   // Set a transition on enter/exit.
+  disableAxis:    null,   // What axis should be disabled. Can be X or Y.
+  reset:          true,   // If the tilt effect has to be reset on exit.
+  glare:          true,  // Enables glare effect
+  maxGlare:       0.3       // From 0 - 1.
+};
+
+$("#tilt").tilt(options);
