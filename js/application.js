@@ -1,24 +1,20 @@
-// Scrollup
-$.scrollUp({
-  scrollSpeed: 300,
-  scrollText: 'Scroll to top', // Text for element, can contain HTML
-});
+// Functions
 
 // Change nav style after scrolling
-$(window).on("scroll touchmove", function () {
+function updateNav() {
   var distance = $(document).scrollTop();
   var $nav = $('nav');
 
-  if (distance > 0){
+  if (distance > 0) {
     $nav.addClass('dark');
   }
   else{
     $nav.removeClass('dark');
   }
-});
+}
 
 // Smooth scroll for anchor links
-$('a[href*="#"]:not([href="#"])').click(function() {
+function navSmoothScroll(){
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -29,41 +25,53 @@ $('a[href*="#"]:not([href="#"])').click(function() {
       return false;
     }
   }
-});
+}
 
 // Hightlight anchor links on scroll
-var navChildren = $("nav li").children();
-var aArray = [];
-for (var i = 0; i < navChildren.length; i++) {
-  var aChild = navChildren[i];
-  var ahref = $(aChild).attr('href');
-  aArray.push(ahref);
-}
-$(window).scroll(function() {
-  var windowPos = $(window).scrollTop();
-  var windowHeight = $(window).height();
-  var docHeight = $(document).height();
+function initNavLink() {
+  var navItems = $("nav li").children();
+  var hrefs = [];
 
-  for (var i = 0; i < aArray.length; i++) {
-    var theID = aArray[i];
-    var secPosition = $(theID).offset().top;
-    secPosition = secPosition - 85;
-    var divHeight = $(theID).height();
-    
-    divHeight = divHeight - 50;
-    if (windowPos >= secPosition && windowPos < (secPosition + divHeight)) {
-      $("a[href='" + theID + "']").addClass("active");
-    } else {
-      $("a[href='" + theID + "']").removeClass("active");
+  for (var i = 0; i < navItems.length; i++) {
+    var navItem = navItems[i];
+    var href = $(navItem).attr('href');
+    hrefs.push(href);
+  }
+
+  function updateNavLink() {
+    var windowPos = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var docHeight = $(document).height();
+
+    for (var i = 0; i < hrefs.length; i++) {
+      var theID = hrefs[i];
+      var secPosition = $(theID).offset().top;
+      secPosition = secPosition - 85;
+      var divHeight = $(theID).height();
+
+      divHeight = divHeight - 50;
+      if (windowPos >= secPosition && windowPos < (secPosition + divHeight)) {
+        $("a[href='" + theID + "']").addClass("active");
+      } else {
+        $("a[href='" + theID + "']").removeClass("active");
+      }
     }
   }
-});
 
-// LightGallery
-$("#gallery").lightGallery(); 
+  $(window).scroll(updateNavLink);
+}
 
-// Effect for the box hero
-var options = {
+
+// Events
+$(window).on("scroll touchmove", updateNav);
+$('a[href*="#"]:not([href="#"])').click(navSmoothScroll);
+
+// Initialization
+initNavLink();
+
+$("#gallery").lightGallery();
+
+var tiltOptions = {
   maxTilt:        20,
   perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
   easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
@@ -73,7 +81,24 @@ var options = {
   disableAxis:    null,   // What axis should be disabled. Can be X or Y.
   reset:          true,   // If the tilt effect has to be reset on exit.
   glare:          true,  // Enables glare effect
-  maxGlare:       0.3       // From 0 - 1.
+  maxGlare:       0.3   // From 0 - 1.
 };
 
-$("#tilt").tilt(options);
+$("#tilt").tilt(tiltOptions);
+
+var scrollUpOptions = {
+  scrollName: 'scrollUp',      // Element ID
+  scrollDistance: 300,         // Distance from top/bottom before showing element (px)
+  scrollFrom: 'top',           // 'top' or 'bottom'
+  scrollSpeed: 300,            // Speed back to top (ms)
+  easingType: 'linear',        // Scroll to top easing (see http://easings.net/)
+  animation: 'fade',           // Fade, slide, none
+  animationSpeed: 200,         // Animation speed (ms)
+  scrollText: '<i class="fa fa-arrow-up"/>', // Text for element, can contain HTML
+  scrollTitle: false,          // Set a custom <a> title if required.
+  scrollImg: false,            // Set true to use image
+  activeOverlay: false,        // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+  zIndex: 2147483647           // Z-Index for the overlay
+}
+
+$.scrollUp(scrollUpOptions);
