@@ -69,7 +69,7 @@ $('a[href*="#"]:not([href="#"])').click(navSmoothScroll);
 // Initialization
 initNavLink();
 
-$("#gallery").lightGallery();
+// $("#gallery").lightGallery();
 
 var tiltOptions = {
   maxTilt:        20,
